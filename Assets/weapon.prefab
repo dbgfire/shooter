@@ -43,6 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49032a84704770b40a0ee6192b814cd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammo: {fileID: 1345674372199602445, guid: 1986777e80cde3b429a2c3d118c05ac1, type: 3}
+  ammo: {fileID: 1742793240294444720, guid: 47dca1149af44f241b8c7450c3554e54, type: 3}
   ammoSpeedModifier: 1
-  shootDirection: {x: 1, y: 0, z: 0}
+  shootDirection: {x: -1, y: 0, z: 0}

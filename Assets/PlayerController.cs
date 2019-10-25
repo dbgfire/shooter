@@ -16,19 +16,21 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        move.y =  Input.GetAxis("Vertical") * speed * Time.deltaTime ;
-        move.x =  Input.GetAxis("Horizontal") * speed * Time.deltaTime ;
+        move.x =  -Input.GetAxis("Vertical") * speed * Time.deltaTime ;
+        move.y =  -Input.GetAxis("Horizontal") * speed * Time.deltaTime ;
         //Debug.Log(move);
-        if(transform.position.y +move.y <4.5F &&transform.position.y +move.y >-4.5F && transform.position.x +move.x <0F &&transform.position.x +move.x >-10F ){
+        if(transform.position.y +move.y <4.5F &&transform.position.y +move.y >-4.5F ){
             transform.Translate(move);
         }
         if(Input.GetButtonDown("Fire")){
             shoot();
+            
         }
         
     }
     void shoot(){
         GetComponentInChildren<weapon>().shoot();
+        
     }
     public void die(){
         alive=false;

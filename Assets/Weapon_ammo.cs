@@ -20,7 +20,21 @@ public class Weapon_ammo : MonoBehaviour
     {
         transform.Translate(direction *speed *Time.deltaTime , Space.World);
     }
-    private void OnTriggerEnter2D(Collider2D collision) {
+    // private void OnTriggerEnter2D(Collider2D collision) {
+    //     Debug.Log("Collision go"+collision.gameObject);
+    //     Debug.Log("ammo shooter"+ ammo_shooter);
+    //     if(ammo_shooter != null && collision.gameObject.tag !=ammo_shooter.tag){
+    //         if(collision.tag =="Player" && collision.GetComponent<PlayerController>() != null){
+    //             collision.gameObject.GetComponent<PlayerController>().die();
+    //         }
+    //         else if(collision.gameObject.GetComponent<ennemyController>()){
+    //             collision.gameObject.GetComponent<ennemyController>().die();
+    //         }
+    //         Destroy(gameObject);
+    //     }
+
+    // }
+     private void OnTriggerEnter(Collider collision) {
         Debug.Log("Collision go"+collision.gameObject);
         Debug.Log("ammo shooter"+ ammo_shooter);
         if(ammo_shooter != null && collision.gameObject.tag !=ammo_shooter.tag){

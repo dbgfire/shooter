@@ -20,7 +20,7 @@ public class ennemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {  
-        move.y =(Mathf.Cos(timeOffset-Time.time)*amplitude);
+        move.z =(Mathf.Cos(timeOffset-Time.time)*amplitude);
         transform.Translate(move);
 
         tickTimer+= Time.deltaTime;
